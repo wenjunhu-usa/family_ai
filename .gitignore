@@ -1,0 +1,48 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*token*.json
+mcp-devices.json
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage.xml
+.coverage
+htmlcov/
+
+# Runtime and personal data
+data/
+logs/
+backups/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.eml
+*.wav
+*.mp4
+
+# Models and generated artifacts
+models/
+build/
+dist/
+tools/
+desktop/dist/
+desktop/node_modules/
+desktop/src-tauri/target/
+desktop/src-tauri/gen/
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+*.swp

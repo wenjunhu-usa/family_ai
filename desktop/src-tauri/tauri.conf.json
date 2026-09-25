@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Family AI",
+  "version": "0.1.0",
+  "identifier": "ai.family.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [{
+      "label": "main",
+      "title": "Family AI",
+      "width": 1320,
+      "height": 860,
+      "minWidth": 720,
+      "minHeight": 620,
+      "center": true,
+      "resizable": true,
+      "fullscreen": false,
+      "titleBarStyle": "Overlay",
+      "hiddenTitle": true
+    }],
+    "security": {
+      "csp": "default-src 'self' customprotocol: asset:; connect-src 'self' http://127.0.0.1:8000 ipc: http://ipc.localhost; img-src 'self' asset: data: blob:; media-src 'self' asset: data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app"],
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/*", "icons/icon.icns"],
+    "category": "Productivity",
+    "shortDescription": "Private local-first family assistant",
+    "macOS": {
+      "minimumSystemVersion": "14.0",
+      "infoPlist": "Info.plist"
+    }
+  }
+}

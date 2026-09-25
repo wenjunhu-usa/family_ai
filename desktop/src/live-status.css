@@ -1,0 +1,13 @@
+.agent i { width: 7px; height: 7px; background: transparent; }
+.agent.pending i { background: #c95d50; box-shadow: 0 0 0 3px #c95d501c; }
+.agent.active i { background: #51a36a; box-shadow: 0 0 0 3px #51a36a22; }
+.agent.pending > span { background: #f4e2df; color: #a44e45; }
+.agent.active > span { background: var(--green2); color: var(--green); }
+.approval-bell.has-approvals {
+  color: #c95d50;
+  background: #c95d5012;
+  animation: bell-alert 1.4s ease-in-out infinite;
+}
+@keyframes bell-alert {
+  50% { transform: rotate(7deg); box-shadow: 0 0 0 5px #c95d5010; }
+}
